@@ -8,6 +8,7 @@ namespace PhoneBookApp
         public static void Main(string[] args)
         {
             WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
+
             _ = builder.Services.AddDbContext<ApplicationDbContext>(options =>
             {
                 _ = options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
